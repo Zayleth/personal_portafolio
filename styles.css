@@ -109,18 +109,83 @@ h1, h2 {
 /* #projects */
 
 #projects {
-    display: flex;
-    justify-content: center;
     background: var(--main-blue);
     padding: 160px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .project-tile > h2 {
     font-size: 42px;
     border-bottom: 2px solid #dfdfe2;
-    /* max-width: 640px; */
+    margin-bottom: 80px;
 }
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1280px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    background-color: gray;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    width: 350px;
+}
+
+.project-img {
+    height: calc(100% - 1.8rem);
+    width: 100%;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem 0.5rem;
+    background-color: var(--main-gray);
+    color: white;
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.code:hover {
+    color: orange;
+}
+
+.button {
+    background-color: var(--main-gray);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    transition: 0.3s ease-out;
+
+    margin-top: 60px;
+}
+
+.button:hover {
+    background-color: #be3144;
+}
+
+.button-sign {
+    font-weight: bold;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    margin-left: 10px;
+}
+
 
 /* contact-section */
 
