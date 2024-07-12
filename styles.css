@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    /* font-size: 62.5%; */
 }
 
 * {
@@ -13,10 +12,7 @@ section {
     min-height: 100vh;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* RESPONSIVE */
 @media screen and (max-width: 800px) {
     section {
         min-height: 0;
@@ -28,8 +24,10 @@ body {
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.4;
+    color: white;
 }
 
 :root {
@@ -123,37 +121,41 @@ h1, h2 {
     font-size: 42px;
     border-bottom: 2px solid #dfdfe2;
     margin-bottom: 80px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
     max-width: 1280px;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
 }
+
 
 .project {
-    background-color: gray;
+    background: var(--main-gray);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    width: 350px;
+    height: 28rem;
 }
 
+
 .project-img {
-    height: calc(100% - 1.8rem);
+    height: calc(100% - 6.8rem);
     width: 100%;
+    object-fit: cover;
 }
 
 .project-title {
-    font-size: 1.8rem;
     text-align: center;
     font-weight: bold;
-    padding: 1.5rem 0.5rem;
-    background-color: var(--main-gray);
     color: white;
+    font-size: 1.8rem;
+    padding: 2rem 0.5rem;
 }
 
 .code {
@@ -161,7 +163,7 @@ h1, h2 {
     transition: color 0.3s ease-out;
 }
 
-.code:hover {
+.code:hover { /* FIXXXXXXXXXXXXXXXXXX*/
     color: orange;
 }
 
@@ -171,21 +173,19 @@ h1, h2 {
     padding: 10px 20px;
     font-size: 1.5rem;
     transition: 0.3s ease-out;
-
-    margin-top: 60px;
 }
 
 .button:hover {
     background-color: #be3144;
+    margin-left: 20px;
 }
 
 .button-sign {
     font-weight: bold;
     transform: translateX(0);
     transition: transform 0.3s ease-out;
-    margin-left: 10px;
+    margin-left: 8px;
 }
-
 
 /* contact-section */
 
@@ -229,6 +229,10 @@ h1, h2 {
     text-shadow: 2px 2px 1px #1f1f1f;
     padding: 10px 20px;
     transition: transform 0.3s ease-out;
+}
+
+.img-text:hover { /*FIXXXXXXXXXXXXXX*/
+    margin-top: 10px;
 }
 
 /* footer */
